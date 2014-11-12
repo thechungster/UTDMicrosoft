@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2014 at 10:16 PM
+-- Generation Time: Nov 12, 2014 at 10:24 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -32,7 +32,8 @@ CREATE TABLE IF NOT EXISTS `userinfo` (
   `Password` text NOT NULL,
   `Email` text NOT NULL,
   `Major` text NOT NULL,
-  `Entrance Year` int(4) NOT NULL
+  `Entrance Year` int(4) NOT NULL,
+  `Classes` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
