@@ -7,7 +7,7 @@
 	$servername = "localhost";																// ip of the database
 	$username = "root";																		// user name of the databse
 	$password = "";																			//password to access the databse
-	$dbname = "capitalone";																	//name of database
+	$dbname = "microsoft";																	//name of database
 
 	$user = mysql_escape_string($user);														// make $user able to be used in sql queries
 	$pass = mysql_escape_string($passw);													// make $pass able to be used in sql queries
@@ -17,7 +17,7 @@
 
 
 	
-	$sql = "SELECT Password FROM users WHERE Email='$user'";							// creqte query
+	$sql = "SELECT Password FROM userinfo WHERE Username='$user'";							// creqte query
 	mysql_select_db($dbname);																// select database
 
 	if($result = mysql_query($sql, $conn))	{												// if the query works
