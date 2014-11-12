@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title> This is the Title </title>
+
+<script src="./assets/js/login.js"> </script>											<!-- importing the javascript that will be used -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>		<!-- importing jquery library -->
+
+</head>
+
+<form name="loginForm" method="post" onsubmit="return validateLogin();">												<!-- create form and run the javascript validateLogin when form is submitted -->
+
+<b>Username:</b> <input type="text" name="username" placeholder="Username" required> <br>				<!-- The user name text field, required means cant submit without it being filled (bolded because grace loves the bold tag) -->
+<b>Password:</b> <input type="password" name="password" placeholder="Password" required> <br>			<!-- password field, also required and of course bolded -->
+
+<input type ="submit"> 																	<!-- the submit button -->
+
+</form>																					<!-- end form tag -->
+
+															
+</html>
+
