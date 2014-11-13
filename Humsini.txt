@@ -1,0 +1,6 @@
+Hi Guys
+~Humsini
+
+P.S. I'm using the SourceTree Client for GitHub...
+The Github for Windows looks nice but is not any easier to figure out. Supposedly using the
+"terminal" is better than using any GUI for Git...?
