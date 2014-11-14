@@ -1,8 +1,8 @@
 <?php
 
-	$user = $_POST['user'];
-	$passw = $_POST['pass'];
-	$login = $_POST['login'];
+	$user = $_POST['username'];
+	$passw = $_POST['password'];
+	$email = $_POST['email'];
 
 	$servername = "localhost";
 	$username = "root";
@@ -15,57 +15,27 @@
 
 	$conn = mysql_connect($servername, $username, $password) or die(mysql_error());
 
-	if($login == 0)	{
-		$sql = "SELECT Email FROM userinfo WHERE Email='$user'";	
-		mysql_select_db($dbname);
+	$sql = "SELECT Username FROM userinfo WHERE Username='$user'";	
+	mysql_select_db($dbname);
 
-		if($result = mysql_query($sql, $conn))	{
-			//email already taken
-			if(mysql_num_rows($result))	{
-				$record = mysql_fetch_assoc($result);
-				print_r("Taken");
-			}
-			//email not taken, proceed w'th registration
-			else{
-				$sql = "INSERT INTO userinfo (Email, Password) 
-				VALUES ('$user', '$pass')";
-				if($result = mysql_query($sql, $conn))	{
-					print_r("Success");
-				}
-				else{
-					print_r("Error");
-				}
-			}
+	if($result = mysql_query($sql, $conn))	{
+		//email already taken
+		if(mysql_num_rows($result))	{
+			$record = mysql_fetch_assoc($result);
+			print_r("Taken");
 		}
-	}
-
-	else if($login == 1)	{
-		$sql = "SELECT Password FROM userinfo WHERE Email='$user'";
-		mysql_select_db($dbname);
-
-		if($result = mysql_query($sql, $conn))	{
-			if(mysql_num_rows($result))	{
-				$record = mysql_fetch_assoc($result);
-				if ($record['Password'] == $passw)	{
-					print_r('True');
-				}
-				else{
-					print_r('False');
-				}
-			}
-
-			else{
-				echo "False";
-			}
-
-		}
+		//email not taken, proceed w'th registration
 		else{
-			echo "False";
+			$sql = "INSERT INTO userinfo (Username, Password) 
+			VALUES ('$user', '$pass')";
+			if($result = mysql_query($sql, $conn))	{
+				print_r("Success");
+			}
+			else{
+				print_r("Error");
+			}
 		}
-
-
 	}
-
 
 
 ?>

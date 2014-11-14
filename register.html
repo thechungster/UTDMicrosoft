@@ -5,12 +5,13 @@
 
 <title> Register </title>
 
-<script src="./assets/js/login.js"> </script>											<!-- importing the javascript that will be used -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>		<!-- importing jquery library -->
+<script src="./assets/js/register.js"> </script>											<!-- importing the javascript that will be used -->
+
 
 </head>
 
-<form name="loginForm" method="post" onsubmit="return validateLogin();">												<!-- create form and run the javascript validateLogin when form is submitted -->
+<form name="registerForm" method="post" onsubmit="return validateRegister();">												<!-- create form and run the javascript validateLogin when form is submitted -->
 <table style="width:300px">
 <tr>
 <td>Username:</td>
@@ -18,15 +19,15 @@
 </tr>
 <tr>
 <td>Password: </td>
-<td><input type="password" name="password" placeholder="Password" required> 			<!-- password field, also required and of course bolded --></td>
+<td><input type="password" name="password" placeholder="Password" onchange="checkPasswordMatch();" required> 			<!-- password field, also required and of course bolded --></td>
 </tr>
 <tr>
 <td>Confirm Password:</td>
-<td> <input type="password" name="confirmPass" placeholder="Confirm Password" required> </td>
+<td> <input type="password" name="confirmPass" onChange="checkPasswordMatch();" placeholder="Confirm Password" required> </td>
 </tr>
 <tr>
 <td>Email: </td>
-<td> <input type="text" name="email" placeholder="Email (Optional)"> </td>
+<td> <input type="email" name="email" placeholder="Email (Optional)"> </td>
 </tr>
 <tr>
 <td>

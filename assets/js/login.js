@@ -22,7 +22,7 @@ function callPhp(user, pass)	{
 
 	$.ajax({
 		type: "POST",
-		url: "/assets/php/login.php",
+		url: "/microsoft/assets/php/login.php",
 		data:{username: user, password: pass},
 		success: function(msg)	{
 			if(msg == "True")	{													// yay login worked
