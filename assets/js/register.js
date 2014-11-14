@@ -42,7 +42,7 @@ function createRegister(user, pass, email)	{
 
 	$.ajax({
 		type:"POST",
-		url:"/microsoft/assets/php/register.php",
+		url:"./assets/php/register.php",
 		data:{username: user, password: pass, email: email},
 		success: function(msg)	{
 			if(msg == "Success")	{
