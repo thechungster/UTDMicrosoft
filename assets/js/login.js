@@ -7,14 +7,16 @@ function validateLogin()	{
 	var pass = document.forms["loginForm"]["password"].value;									// set variable "pass" to the password field
 
 	if(user.length > 5 && pass.length > 5)	{													// do some sort of input validation here, 
-		return callPhp(user, pass);
-																							// if input is valid, call "callPhp" function
+		callPhp(user, pass);
+		return false;																					// if input is valid, call "callPhp" function
 	}
 
 	else{
 		alert("You have entered an invalid username or password");
 		return false;
+
 	}
+	return false;
 
 }
 
