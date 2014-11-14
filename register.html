@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title> Register </title>
+
+<script src="./assets/js/login.js"> </script>											<!-- importing the javascript that will be used -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>		<!-- importing jquery library -->
+
+</head>
+
+<form name="loginForm" method="post" onsubmit="return validateLogin();">												<!-- create form and run the javascript validateLogin when form is submitted -->
+<table style="width:300px">
+<tr>
+<td>Username:</td>
+<td> <input type="text" name="username" placeholder="Username" required></td> 			<!-- The user name text field, required means cant submit without it being filled (bolded because grace loves the bold tag) -->
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="password" name="password" placeholder="Password" required> 			<!-- password field, also required and of course bolded --></td>
+</tr>
+<tr>
+<td>Confirm Password:</td>
+<td> <input type="password" name="confirmPass" placeholder="Confirm Password" required> </td>
+</tr>
+<tr>
+<td>Email: </td>
+<td> <input type="text" name="email" placeholder="Email (Optional)"> </td>
+</tr>
+<tr>
+<td>
+<input type ="submit"> 
+</td>																	<!-- the submit button -->
+</tr>
+
+</table>
+
+</form>																					<!-- end form tag -->
+
+<br>
+
+<a href="./index.html"> Click here to go back to main page </a>
+
+															
+</html>
+
