@@ -22,12 +22,15 @@ function validateRegister()	{
 	var user = document.forms["registerForm"]["username"].value;									//set variable 'user' to what is inside the username text field. (loginForm is the name of the form, and username is the name of the username field these were both named in the html file)
 	var pass = document.forms["registerForm"]["password"].value;									// set variable "pass" to the password field
 	var email = document.forms["registerForm"]["email"].value;
+	var confirm = document.forms["registerForm"]["confirmPass"].value;
 
-	if(user.length > 5 && pass.length > 5)	{													// do some sort of input validation here, 
+	if(user.length > 5 && pass.length > 5 && confirm == pass )	{													// do some sort of input validation here, 
 		return createRegister(user, pass, email);
 																							// if input is valid, call "callPhp" function
 	}
-
+	if(confirm != pass){
+		alert("passwords different");
+	}
 	else{
 		alert("something too short blah blah blah");
 		//return false;
