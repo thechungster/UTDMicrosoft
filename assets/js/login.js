@@ -13,7 +13,7 @@ function validateLogin()	{
 
 	else{
 		alert("You have entered an invalid username or password");
-		return true;
+		return false;
 	}
 
 }
