@@ -13,7 +13,7 @@ function validateLogin()	{
 
 	else{
 		alert("You have entered an invalid username or password");
-		location.reload();
+		history.go(0);
 	}
 
 }
